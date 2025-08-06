@@ -16,6 +16,9 @@ cd my-app
 
 3. 安裝相依性：
 ```bash
+# 之前使用 node 20 建立專案
+nvs use 20
+
 npm install
 ```
 
