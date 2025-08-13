@@ -121,3 +121,29 @@ export default tseslint.config([
   },
 ])
 ```
+
+## 多國語系
+Googole docs　網址：　https://docs.google.com/spreadsheets/d/1I7SzV7n409ek4ZeX2LfVLxkUA3DBQG6Eb77nodc3-cE/edit?usp=sharing  
+多國語系轉換 Python 程式: [i18n_2025.py](./src/locales/i18n_2025.py)
+```bash
+npm install i18next@22.5.1 react-i18next@12.3.1
+```
+1. 新增 .\src\locales\i18n.ts 檔案
+2. main.jsx 引入 i18n.ts
+```bash
+//引入 i18n.js
+import './locales/i18n'
+```
+3. App.jsx 引入 react-i18next 與 i18nKeys
+```bash
+import { useTranslation } from 'react-i18next';
+import { i18nKeys } from '../locales/i18nKeys'
+```
+4. 取得翻譯函式
+```bash
+const { t } = useTranslation();
+```
+5. 指定翻譯 key 值
+```bash
+{t(i18nKeys.HomePage_Count_Text)} {count}
+```
